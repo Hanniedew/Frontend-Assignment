@@ -1,4 +1,5 @@
-// Modal to allow user to add new data entries
+// Desc: Modal to allow user to add new data entries
+
 import { useState, useContext } from "react";
 import DataContext from "../Context/DataContext";
 
@@ -87,7 +88,12 @@ function AddModal() {
   return (
     <div>
       {/* Button to open modal */}
-      <Button variant="contained" onClick={handleOpen}>
+      <Button
+        variant="contained"
+        color="primary"
+        sx={{ color: "inherit" }}
+        onClick={handleOpen}
+      >
         Add User
       </Button>
       <Modal
