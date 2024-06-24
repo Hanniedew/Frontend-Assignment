@@ -88,14 +88,17 @@ function AddModal() {
   return (
     <div>
       {/* Button to open modal */}
-      <Button
-        variant="contained"
-        color="primary"
-        sx={{ color: "inherit" }}
-        onClick={handleOpen}
-      >
-        Add User
-      </Button>
+      <div className="mr-4">
+        <Button
+          variant="contained"
+          color="primary"
+          sx={{ color: "inherit" }}
+          onClick={handleOpen}
+        >
+          Add User
+        </Button>
+      </div>
+
       <Modal
         open={open}
         onClose={handleClose}

@@ -11,17 +11,7 @@ function ColorMode() {
   const theme = useTheme();
   const colorMode = useColorMode();
   return (
-    <Box
-      sx={{
-        display: "flex",
-        width: "100%",
-        alignItems: "center",
-        justifyContent: "center",
-        color: "text.primary",
-        borderRadius: 1,
-        p: 2,
-      }}
-    >
+    <Box>
       {/* {theme..mode} mode */}
       <IconButton
         sx={{ ml: 1 }}
