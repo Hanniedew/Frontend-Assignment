@@ -15,27 +15,27 @@ function Table() {
     addData(newData);
   };
   return (
-    <div>
-      <h1 className="text-red-950">User Table</h1>
+    <div className="text-center mt-24">
+      <h1 className="mb-8 text-2xl font-bold">User Table</h1>
       <Button variant="contained" onClick={handleAddData}>
         Add User
       </Button>
-      <table>
+      <table className="mx-auto w-full max-w-4xl mt-8">
         <thead>
           <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Phone</th>
+            <th className="border px-4 py-2"># ID</th>
+            <th className="border px-4 py-2">Name</th>
+            <th className="border px-4 py-2">Email</th>
+            <th className="border px-4 py-2">Phone</th>
           </tr>
         </thead>
         <tbody>
           {data.map((item) => (
             <tr key={item.id}>
-              <td>{item.id}</td>
-              <td>{item.name}</td>
-              <td>{item.email}</td>
-              <td>{item.phone}</td>
+              <td className="border px-4 py-2">{item.id}</td>
+              <td className="border px-4 py-2">{item.name}</td>
+              <td className="border px-4 py-2">{item.email}</td>
+              <td className="border px-4 py-2">{item.phone}</td>
             </tr>
           ))}
         </tbody>
