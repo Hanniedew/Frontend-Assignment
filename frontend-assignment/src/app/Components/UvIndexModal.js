@@ -12,9 +12,10 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import Typography from "@mui/material/Typography";
+import { useTheme } from "@mui/material/styles";
 
 // To style the modal
-const style = {
+const style = (theme) => ({
   position: "absolute",
   top: "50%",
   left: "50%",
@@ -26,14 +27,18 @@ const style = {
   borderRadius: 3,
   boxShadow: 24,
   p: 4,
+  color: theme.palette.text.primary,
+
   // Media query for desktop screens
   "@media (min-width: 768px)": {
     width: "50%", // Adjusted width for desktop screens
     maxWidth: "500px", // Max width for desktop screens
   },
-};
+});
 
 function UvIndexModal() {
+  const theme = useTheme();
+
   const [open, setOpen] = useState(false);
   const [uvIndexData, setUvIndexData] = useState(null);
 
@@ -85,10 +90,10 @@ function UvIndexModal() {
               <table style={{ width: "100%", borderCollapse: "collapse" }}>
                 <thead>
                   <tr>
-                    <th style={{ border: "1px solid #000", padding: "8px" }}>
+                    <th className="border border-gray-400 px-4 py-2 text-center">
                       Time
                     </th>
-                    <th style={{ border: "1px solid #000", padding: "8px" }}>
+                    <th className="border border-gray-400 px-4 py-2 text-center">
                       Index
                     </th>
                   </tr>
